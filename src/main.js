@@ -1,3 +1,9 @@
+require.config({
+    paths: {
+        jquery: "lib/jquery"
+    }
+});
+
 define([
     'require',
     'jquery',
