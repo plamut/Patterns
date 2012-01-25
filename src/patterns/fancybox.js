@@ -8,7 +8,7 @@
  */
 define([
     'require',
-    '../lib/jquery',
+    'jquery',
     '../lib/jquery.fancybox'
 ], function(require) {
     var fancybox = {

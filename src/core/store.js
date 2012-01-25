@@ -8,7 +8,7 @@
  */
 define([
     'require',
-    '../lib/jquery'
+    'jquery'
 ], function(require) {
     var store = {
         'getPatternAttributes': function(pattern) {

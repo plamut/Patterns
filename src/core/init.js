@@ -8,7 +8,7 @@
  */
 define([
     'require',
-    '../lib/jquery',
+    'jquery',
     // XXX: belong to the patterns once they are done
     '../lib/jquery-ext',
     '../lib/jquery.fancybox',

@@ -1,6 +1,6 @@
 define([
     'require',
-    './lib/jquery',
+    'jquery',
     './lib/domReady!',
     './core/init',
     './core/store',
