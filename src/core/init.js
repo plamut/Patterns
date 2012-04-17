@@ -289,10 +289,6 @@ var mapal = {
 
     // Apply some standard markup transformations
     initTransforms: function(root) {
-        // record history disables mostly everything for now
-        $(".record-history", root).addClass('cant-touch-this');
-        $(root).is(".record-history") && $(root).addClass('cant-touch-this');
-
         $(".jsOnly", root).show();
 
         $("legend:not(.cant-touch-this)", root).each(function() {

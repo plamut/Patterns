@@ -16,6 +16,7 @@ define([
     './patterns/modal',
     './patterns/navigation',
     './patterns/validate',
+    './patterns/history',
     './utils'
 ], function(require) {
     var log = require('./logging').getLogger(),
@@ -37,7 +38,8 @@ define([
         inject_log_old: require('./patterns/inject_log_old'),
         modal: require('./patterns/modal'),
         navigation: require('./patterns/navigation'),
-        validate: require('./patterns/validate')
+        validate: require('./patterns/validate'),
+        history: require('./patterns/history')
     };
 
     var patterns = {};

@@ -221,6 +221,7 @@ define([
             // trigger inject event
             $targets.trigger('inject', {
                 method: method_name,
+                opts: opts,
                 $sources: $sources,
                 $trigger_el: $el
             });
