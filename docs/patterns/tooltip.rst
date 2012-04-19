@@ -85,7 +85,7 @@ Sticky tooltips
 
 By default, the tooltip disappears when the cursor is moved off the element or
 the triggering element is clicked. If this is not desired behaviour, there is
-the option to have a 'sticky' tooltip.  This only disappears when a close
+the option to have a *sticky* tooltip.  This only disappears when a close
 button on the tooltip is clicked. When the sticky option is chosen, the close
 button will be inserted for you automatically.
 
@@ -94,6 +94,28 @@ button will be inserted for you automatically.
    <a href="#" data-tooltip="sticky">
     …
    </a>
+
+A sticky tooltips normally automatically gets a close-button, unless the
+``noclose`` option is also given.
+
+
+Interactive tooltips
+--------------------
+
+There is an intermediate between normal and sticky tooltips: *interactive*
+tooltips. Like sticky tooltips they require an explicit click in order to
+be close, but that click might be anywhere outside the tooltip.
+
+.. code-block:: html
+
+   <a href="#" data-tooltip="interactive">
+    …
+    <label><input type="checkbox"/> Enable this option</label>
+    …
+   </a>
+
+Licke a sticky tooltip an interactive normally gets a close-button, unless the
+``noclose`` option is also given.
 
 
 AJAX tooltips

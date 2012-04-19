@@ -56,6 +56,12 @@ define([
                     .on("click.tooltip", $trigger, tooltip.hide);
                 // Make sure click on the trigger element becomes a NOP
                 $trigger.on("click.tooltip", $trigger, tooltip.blockDefault);
+            } else if (parameters.interactive) {
+                $container.find(".closePanel")
+                    .on("click.tooltip", $trigger, tooltip.hide);
+                $trigger.on("click.tooltip", $trigger, tooltip.blockDefault);
+                $container.on("click.tooltip", $trigger, tooltip.stopPropagation);
+                $(window).on("click.tooltip", $trigger, tooltip.hide);
             } else {
                 $container.on("click.tooltip", $trigger, tooltip.hide);
                 if (parameters.click) {
@@ -74,6 +80,10 @@ define([
             $container.off(".tooltip");
             $container.find(".closePanel").off(".tooltip");
             $trigger.off(".tooltip");
+        },
+
+        stopPropagation: function(event) {
+            event.stopPropagation();
         },
 
         blockDefault: function(event) {
@@ -146,7 +156,7 @@ define([
             $container.append(
                 $("<div/>").css("display", "block").append($content))
                 .append($("<span></span>", {"class": "pointer"}));
-            if (options.sticky && !options.noclose) {
+            if ((options.interactive || options.sticky) && !options.noclose) {
                 $("<button/>", {"class": "closePanel"})
                     .text("Close")
                     .insertBefore($container.find("*"));
